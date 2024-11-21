@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail AI Companion",
+  "version": "1.0.0",
+  "description": "Intelligent AI-powered email productivity extension",
+  "minimum_chrome_version": "124",
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png", 
+    "128": "assets/icon128.png"
+  },
+  
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["src/content-script.js"],
+    "css": ["styles/gmail-integration.css"]
+  }]
+}
