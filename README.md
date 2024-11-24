@@ -10,21 +10,13 @@ A cutting-edge Chrome Extension leveraging Chrome's built-in AI APIs to enhance 
 │
 ├── 📄 manifest.json
 ├── 📄 README.md
+├── 📄 background.js
+├── 📄 content.js
+├── 📄 popup.js
+├── 📄 popup.html
+├── 📄 styles.css
 │
-├── 📂 src/
-│   ├── 📄 background.js
-│   ├── 📄 content-script.js
-│   ├── 📄 popup.js
-│   └── 📂 utils/
-│       ├── 📄 ai-helper.js
-│       ├── 📄 email-analyzer.js
-│       └── 📄 translation-service.js
-│
-├── 📂 styles/
-│   ├── 📄 popup.css
-│   └── 📄 gmail-integration.css
-│
-└── 📂 assets/
+└── 📂 icons/
     ├── 📄 icon16.png
     ├── 📄 icon48.png
     └── 📄 icon128.png
@@ -38,7 +30,7 @@ A cutting-edge Chrome Extension leveraging Chrome's built-in AI APIs to enhance 
 
 ## Requirements
 - Chrome 124+
-- Gemini Nano or equivalent AI support
+- Gemini Nano support
 
 ## Installation
 1. Clone the repository
