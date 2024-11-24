@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Gmail AI Companion(Testing)",
+    "name": "Gmail AI Companion",
     "version": "1.0.0",
     "description": "AI-powered email assistance using Chrome's built-in AI capabilities",
     "permissions": [
