@@ -14,7 +14,7 @@ class GmailAIIntegration {
             { code: 'ja', name: 'Japanese' },
             { code: 'ko', name: 'Korean' }
         ];
-        this.init();
+        this.init(); 
         this.setupMutationObserver();
         // Initial check for compose windows
         this.checkForComposeWindows();
