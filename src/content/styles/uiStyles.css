@@ -1,0 +1,158 @@
+/* Gmail AI Tools Styling */
+.gmail-ai-tools-container {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    margin: 8px 0;
+    transition: all 0.2s ease;
+}
+
+.gmail-ai-tools-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.ai-tools-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ai-tool-button {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c4043;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ai-tool-button:hover {
+    background: #f1f3f4;
+    border-color: #dadce0;
+}
+
+.ai-tool-button:active {
+    background: #e8eaed;
+    transform: scale(0.98);
+}
+
+/* Button variants */
+.write-button {
+    background: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+}
+
+.write-button:hover {
+    background: #1557b0;
+    border-color: #1557b0;
+}
+
+.rewrite-button {
+    background: #188038;
+    color: white;
+    border-color: #188038;
+}
+
+.rewrite-button:hover {
+    background: #0d652d;
+    border-color: #0d652d;
+}
+
+.translate-button {
+    background: #ea4335;
+    color: white;
+    border-color: #ea4335;
+}
+
+.translate-button:hover {
+    background: #d93025;
+    border-color: #d93025;
+}
+
+.summarize-button {
+    background: #fbbc04;
+    color: #3c4043;
+    border-color: #fbbc04;
+}
+
+.summarize-button:hover {
+    background: #f9ab00;
+    border-color: #f9ab00;
+}
+
+/* Language select styling */
+.language-select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 8px 32px 8px 12px;
+    font-size: 14px;
+    color: #3c4043;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%233c4043'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+}
+
+.language-select:hover {
+    border-color: #bdc1c6;
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+/* Loading state */
+.loading {
+    position: relative;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    right: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .gmail-ai-tools-container {
+        padding: 8px;
+    }
+
+    .ai-tool-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .language-select {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

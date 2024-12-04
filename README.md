@@ -1,53 +1,63 @@
-# Gmail AI Companion Chrome Extension
+# Gmail AI Companion
 
-## Overview
-A cutting-edge Chrome Extension leveraging Chrome's built-in AI APIs to enhance email productivity.
+A Chrome extension that enhances Gmail with AI-powered features using Chrome's built-in AI capabilities.
+
+## Features
+
+- Email summarization
+- Smart email rewriting
+- Multi-language translation
+- Language detection
+- AI-powered writing assistance
+- Smart compose suggestions
+
+## Installation
+
+1. Clone this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension directory
 
 ## Project Structure
 
-```plaintext
-📂 gmail-ai-companion/
-│
-├── 📄 manifest.json
-├── 📄 README.md
-├── 📄 background.js
-├── 📄 content.js
-├── 📄 popup.js
-├── 📄 popup.html
-├── 📄 styles.css
-│
-└── 📂 icons/
-    ├── 📄 icon16.png
-    ├── 📄 icon48.png
-    └── 📄 icon128.png
+```
+├── src/
+│   ├── background/
+│   │   └── background.js
+│   ├── content/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── popup/
+│   └── styles/
+├── icons/
+├── manifest.json
+└── README.md
 ```
 
-## Features
-- Email Summarization
-- Instant Translation
-- AI-Powered Response Generation
-- Local AI Processing
+## Development
 
-## Requirements
-- Chrome 124+
-- Gemini Nano support
+### Prerequisites
 
-## Installation
+- Google Chrome browser
+- Basic understanding of Chrome Extension APIs
+- Knowledge of JavaScript/HTML/CSS
+
+### Setup
+
 1. Clone the repository
-2. Open Chrome Extensions
-3. Enable Developer Mode
-4. Click "Load Unpacked"
-5. Select the extension directory
+2. Install dependencies: `npm install`
+3. Make your changes
+4. Test locally by loading the unpacked extension
 
-## Usage
-- Click extension icon in Gmail
-- Use AI action buttons
-- Select desired AI functionality
+### Contributing
 
-## Privacy
-- 100% local processing
-- No external data transmission
-- User-controlled AI features
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
 ## License
-MIT Open Source License
+
+MIT License - See LICENSE file for details

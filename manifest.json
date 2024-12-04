@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Gmail AI Companion",
-    "version": "1.0.0",
+    "name": "Gmail AI Companion (beta)",
+    "version": "2.0.0",
     "description": "AI-powered email assistance using Chrome's built-in AI capabilities",
     "permissions": [
         "activeTab",
@@ -9,27 +9,35 @@
         "tabs"
     ],
     "host_permissions": [
-      "https://mail.google.com/*"
+        "https://mail.google.com/*"
     ],
     "background": {
-      "service_worker": "background.js"
+        "service_worker": "src/background/background.js",
+        "type": "module"
     },
     "content_scripts": [{
-      "matches": ["https://mail.google.com/*"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
+        "matches": ["https://mail.google.com/*"],
+        "js": [
+            "src/content/utils/config.js",
+            "src/content/utils/domUtils.js",
+            "src/content/services/aiService.js",
+            "src/content/components/uiComponents.js",
+            "src/content/index.js"
+        ],
+        "css": ["src/styles/styles.css"],
+        "run_at": "document_idle"
     }],
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
-      }
-    },
-    "icons": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
     }
-  }
+}
